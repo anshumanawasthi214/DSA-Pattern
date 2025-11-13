@@ -19,7 +19,7 @@ public class PalindromeList {
     }
     public static void main(String args[]){
         String s="    raCE  car";
-        s=s.replaceAll("\\s+","");// it removes extra spaces completely means:     "  race      a   car "----> "raceacar"
+        s=s.replaceAll("[^a-zA-Z0-9]","");// it removes extra spaces completely means:     "  race      a   car "----> "raceacar"
         s=s.toLowerCase(); //converts the string in lowercase
         
        if(checkPalindrome(s)){
