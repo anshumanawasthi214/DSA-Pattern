@@ -1,40 +1,23 @@
-public class TwoSum{
+import java.util.HashMap;
 
-    public static boolean twoSum(int arr[],int target){
-        int left=0;
-        int right=arr.length-1;
-        boolean found=false;
-        while(left<right){
-            int sum=arr[left]+arr[right];
-            if(sum<target){
-                left++;
+public class TwoSum {
+
+    public static void twoSum(int[] arr,int target){
+        HashMap<Integer,Integer> hmap=new HashMap<>();
+        for(int i=0;i<arr.length;i++){
+            int requiredValue=target-arr[i];
+            if(hmap.containsKey(requiredValue)){
+                System.out.println(" The pairs are : "+hmap.get(requiredValue)+" "+i);
+                return ;
             }
-            else if(sum>target){
-                right--;
-            }
-            else{
-            System.out.println("Pairs are: "+left+" "+right+" for Target :"+target);
-            
-               found=true;
-               left++;
-               right--;
-            }
+            hmap.put(arr[i], i);
         }
-         return found;
-
+        System.out.println("No Pair Found");
     }
-
-
     public static void main(String args[]){
-        int arr[]={2,3,6,7,8,11};
+        int arr[]={2,7,11,15};
         int target=9;
 
-        if(!(TwoSum.twoSum(arr,target))){
-            System.out.println("Target cant be achieve");
-        }
-
-
-
-        
+        TwoSum.twoSum(arr,target);
     }
 }
