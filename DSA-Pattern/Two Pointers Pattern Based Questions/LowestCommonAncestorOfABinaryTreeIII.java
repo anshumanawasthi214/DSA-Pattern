@@ -79,8 +79,6 @@ public class LowestCommonAncestorOfABinaryTreeIII {
         root.right.right = new Node(8);
         root.right.right.parent = root.right;
 
-        LowestCommonAncestorOfABinaryTreeIII obj = new LowestCommonAncestorOfABinaryTreeIII();
-
         // Choose sample nodes for LCA
         Node p = root.left;               // Node 5
         Node q = root.left.right.right;   // Node 4
