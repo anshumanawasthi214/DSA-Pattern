@@ -18,5 +18,6 @@ public class AppendCharacterToStringToMakeSubsequence{
 
         int numberOfCharacter=appendCharacters(s,t);
         System.out.println(" minimum number of characters that need to be appended "+numberOfCharacter);
+       
     }
 }
