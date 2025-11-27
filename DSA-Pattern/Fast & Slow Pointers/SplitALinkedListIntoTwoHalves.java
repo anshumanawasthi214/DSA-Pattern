@@ -23,7 +23,7 @@ public class SplitALinkedListIntoTwoHalves{
         System.out.println("The fist List's Head is : "+head.data+" and second List Head is : "+fast.next.data);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //TC=O(n) SC=O(1)
 
         Node head=new Node(1);
 
