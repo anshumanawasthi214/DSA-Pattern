@@ -1,6 +1,6 @@
 public class MaximumSumOfSubarrayOfSizeK {
 
-    public static int calculateSum(int arr[],int k){
+    public static int calculateSum(int arr[],int k){// TC=O(n) SC=O(1)
         
         int sum=0;
        for(int i=0;i<k;i++){
@@ -11,7 +11,7 @@ public class MaximumSumOfSubarrayOfSizeK {
       for(int i=k;i<arr.length;i++){
             sum+=arr[i]-arr[i-k]; //Add new, Remove old
             maxSum=Math.max(sum,maxSum);
-            
+
        }
        return maxSum;
     }
