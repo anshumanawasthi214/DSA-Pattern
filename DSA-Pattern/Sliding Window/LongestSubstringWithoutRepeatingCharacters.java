@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
@@ -7,6 +9,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
         System.out.println("BruteForce : "+lengthOfLongestSubstring(s));
 
         System.out.println("Optimized : "+lengthOfLongestSubstringOptimized(s));
+
+        System.out.println("Another Optimized way: "+lengthOfLongestSubstringMoreOptimized(s));//little bit more optimized than previous one
 
     }
 
@@ -43,5 +47,25 @@ private static int lengthOfLongestSubstringOptimized(String s) {//TC: O(n) SC : 
         
         return maxLen;
          
+    }
+    public static int lengthOfLongestSubstringMoreOptimized(String s) {
+        //TC: O(n) SC: O(n)
+        
+        Map<Character,Integer> hmap=new HashMap<>();
+        int maxLen=0;
+        
+        int i=0;
+        for(int j=0;j<s.length();j++){
+            char c=s.charAt(j);
+            if(hmap.containsKey(c) && hmap.get(c)>=i){
+                        i=hmap.get(c)+1;
+                    
+                      
+            }
+        hmap.put(c,j);
+         maxLen=Math.max(maxLen,j-i+1);
+          
+        }
+        return maxLen;
     }
 }
