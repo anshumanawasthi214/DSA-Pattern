@@ -1,0 +1,32 @@
+Sliding Window Pattern
+=========================
+The Sliding Window Pattern is a common algorithmic technique used to solve problems that involve finding a subset of data within a larger dataset. This pattern is particularly useful for problems that require examining contiguous segments of an array or string.
+
+The basic idea behind the sliding window pattern is to maintain a "window" that represents a subset of the data. This window can be adjusted (slid) by adding or removing elements as needed, allowing for efficient computation without having to reprocess the entire dataset repeatedly.
+
+Key Concepts of the Sliding Window Pattern:
+
+1. Fixed-Size Window:
+***************************
+   In this approach, the window size remains constant as it slides over the data. For example, in an array, you might look for the maximum sum of any contiguous subarray of size k.
+
+2. Variable-Size Window:
+*****************************
+
+   Here, the window size can change based on certain conditions. This is often used in problems like finding the longest substring without repeating characters or the smallest subarray with a sum greater than a given value.
+3. Efficient Updates:
+**************************
+
+   As the window slides, elements are added to one end and removed from the other. This allows for efficient updates to the current state of the window, often in constant time.
+
+Applications of the Sliding Window Pattern:
+********************************************
+
+- Finding maximum or minimum values in a subarray.  
+- Calculating averages or sums of contiguous segments.
+- Identifying substrings with specific properties (e.g., no repeating characters).
+- Solving problems related to time series data, such as moving averages.  
+
+Example Problem: Given an array of integers and a number k, find the maximum sum of a contiguous subarray of size k.      
+
+The sliding window pattern is a powerful technique that can significantly reduce the time complexity of certain problems, making it a valuable tool in algorithm design and data processing.

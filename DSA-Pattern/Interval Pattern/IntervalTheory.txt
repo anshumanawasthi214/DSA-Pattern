@@ -1,0 +1,29 @@
+Many real-world problems involve intervals, which are continuous ranges of values. Interval theory provides a framework for understanding and manipulating these ranges effectively.
+An interval is typically defined by two endpoints, which can be inclusive or exclusive. For example, the interval [a, b] includes all values from a to b, while (a, b) excludes the endpoints a and b.
+
+Example: Consider the interval [3, 7]. This interval includes all real numbers x such that 3 ≤ x ≤ 7. In contrast, the interval (3, 7) includes all real numbers x such that 3 < x < 7.
+   [3, 7] includes: 3, 4, 5, 6, 7
+   (3, 7) includes: 4, 5, 6
+
+Key concepts in interval theory include:
+
+1. **Types of Intervals**:
+****************************
+
+   - Closed Interval [a, b]: Includes both endpoints a and b.
+   - Open Interval (a, b): Excludes both endpoints a and b.
+   - Half-Open Intervals [a, b) or (a, b]: Include one endpoint and exclude the other.
+2. **Operations on Intervals**:
+*********************************
+
+   - Union: Combining two intervals to form a new interval that covers all    values from both.
+    - Intersection: Finding the common values shared by two intervals.
+    - Difference: Identifying values that are in one interval but not in another.
+
+3. **Applications**:
+***********************
+
+   - Scheduling: Managing time slots and availability. 
+    - Resource Allocation: Distributing resources within specified ranges.
+    - Data Analysis: Grouping and analyzing data within certain bounds.
+Understanding interval theory is crucial for solving problems in various fields, including computer science, mathematics, and operations research. By mastering the concepts of intervals and their operations, one can effectively tackle challenges that involve ranges of values.
