@@ -1,6 +1,12 @@
 Many real-world problems involve intervals, which are continuous ranges of values. Interval theory provides a framework for understanding and manipulating these ranges effectively.
 An interval is typically defined by two endpoints, which can be inclusive or exclusive. For example, the interval [a, b] includes all values from a to b, while (a, b) excludes the endpoints a and b.
 
+The pattern helps us understand how these ranges overalpp, merge,intersect or leave gaps between them.
+                            [start,end] 
+example: [3,8],[7,9] 
+In this example, the intervals          
+         [3,8] and [7,9] overlap at [7,8]
+
 Example: Consider the interval [3, 7]. This interval includes all real numbers x such that 3 ≤ x ≤ 7. In contrast, the interval (3, 7) includes all real numbers x such that 3 < x < 7.
    [3, 7] includes: 3, 4, 5, 6, 7
    (3, 7) includes: 4, 5, 6
@@ -27,3 +33,32 @@ Key concepts in interval theory include:
     - Resource Allocation: Distributing resources within specified ranges.
     - Data Analysis: Grouping and analyzing data within certain bounds.
 Understanding interval theory is crucial for solving problems in various fields, including computer science, mathematics, and operations research. By mastering the concepts of intervals and their operations, one can effectively tackle challenges that involve ranges of values.
+
+
+Two Interval Do not overlapp=>
+   When second event starts after first event ends.
+                         OR
+   When first event starts after second event ends.
+
+   Formula => If Interval1 = [a, b] and Interval2 = [c, d] do not overlap, then either b < c or d < a.
+
+Two Interval Overlapp=>
+   When second event starts before first event ends.
+                           OR
+   When first event starts before second event ends.
+
+   Formula => if Interval1 = [a, b] and Interval2 = [c, d] overlap, then the overlapping interval is given by [max(a, c), min(b, d)] provided that max(a, c) ≤ min(b, d).
+
+They share a common part=>
+   When one event starts before the other event ends and ends after the other event starts.This common part is called the intersection of the two intervals and is useful for merging or counting conflicting events.
+
+   Formula => If Interval1 = [a, b] and Interval2 = [c, d] share a common part, then the common interval is given by [max(a, c), min(b, d)] provided that max(a, c) ≤ min(b, d).
+
+
+Steps in interval problems:
+1. Sort the intervals based on their starting points.
+2. Iterate through the sorted intervals and compare each interval with the next one to check for overlaps
+3. If they overlap, merge them into a single interval by taking the minimum start point and maximum end point.
+4. If they do not overlap, add the current interval to the result list and move to the next interval.
+5. Continue this process until all intervals have been processed. 
+
