@@ -1,9 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MergeInterval{
     public static void main(String args[]){
         int nums[][]={{1,3},{2,6},{8,10},{15,18}};
+
+          Arrays.sort(nums,(a,b)->a[0]-b[0]);
         List<int[]> answer=new ArrayList<>();
         answer.add(new int[]{nums[0][0],nums[0][1]});
         for(int i=1;i<nums.length;i++){
