@@ -9,12 +9,12 @@ public class IntervalListIntersection{
         helper(firstList,secondList);
 
     }
-    public static void helper( int firstList[][], int secondList[][]){
+    public static void helper( int firstList[][], int secondList[][]){ 
+        // TC- O(n+m) SC- O(n)
         if(firstList.length==0 ||secondList.length==0){
             System.out.println("[]");
             return ;
         }
-
         int i=0;
         int j=0;
         List<int[]> ans=new ArrayList<>();
