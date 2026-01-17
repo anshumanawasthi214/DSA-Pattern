@@ -1,0 +1,36 @@
+Line Sweep Algorithm: A technique used to solve problems involving intervals or events by sweeping a line across the problem space and processing events at specific points.
+How Line Sweep Works:
+1. Event Points: Identify key points (events) where changes occur, such as the start and end of intervals.
+2. Sorting Events: Sort these event points in a specific order (usually by their position). 
+
+
+1----------5
+   2----------6
+In this example, we have two intervals: [1, 5] and [2, 6].
+The event points are:
+Events: (1, start), (2, start), (5, end), (6, end)
+Sorted Events: (1, start), (2, start), (5, end), (6, end)
+3. Sweeping the Line: Move a conceptual line across the sorted events, processing each event in order.
+4. Active Intervals: Maintain a data structure (like a TreeMap or balanced BST) to keep track of active intervals as the line sweeps through the events.
+5. Processing Events: For each event:
+   - If it's a start event, add the interval to the active set.
+   - If it's an end event, remove the interval from the active set.
+6. Querying Active Intervals: At any point during the sweep, you can query the active intervals to answer questions like "How many intervals overlap at this point?" or "What is the maximum number of overlapping intervals?"
+
+
+TreeMap Theory:A TreeMap is a data structure that implements a map interface using a red-black tree. It stores key-value pairs in sorted order based on the keys.
+Key Features of TreeMap:
+- Sorted Keys: Keys are stored in sorted order, allowing for efficient range queries.
+- Red-Black Tree: Internally uses a red-black tree to maintain sorted order and balance.
+- Efficient Operations: Provides O(log n) time complexity for basic operations like put, get, and remove.
+- Range Queries: Supports efficient range queries using methods like subMap, headMap, and tailMap.
+
+various operation is TreeMap with TimeComplexity: 
+1. Insertion (put): O(log n)
+2. Deletion (remove): O(log n)
+3. Search (get): O(log n)
+4. Finding Minimum/Maximum: O(log n)
+5. containsKey: O(log n)
+6. Iteration over keys/values: O(n)
+7. floorKey/ceilingKey: O(log n)
+8. update value: O(log n)
