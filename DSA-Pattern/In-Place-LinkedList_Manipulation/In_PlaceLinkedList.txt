@@ -1,0 +1,23 @@
+In-Place Linked List Manipulation:
+-----------------------------------------------
+ 
+In-place linked list manipulation refers to operations that modify the structure of a linked list without using additional memory for new nodes or data structures. This technique is particularly useful when working with large datasets where memory efficiency is crucial. Common in-place operations include reversing a linked list, removing duplicates, and sorting a linked list in place. 
+Key Techniques:
+
+1. Reversing a Linked List:
+------------------------------
+   - Initialize three pointers: previous (prev), current (curr), and next (next).
+   - Iterate through the list, adjusting the next pointer of each node to point to the previous node.
+   - Update the previous and current pointers as you traverse the list until all nodes are reversed.
+
+2. Removing Duplicates:
+------------------------------
+   - Use two pointers: one to traverse the list (current) and another to track the last unique node (runner).
+   - For each node, check if the next node has the same value. If it does, skip the next node by adjusting the next pointer of the current node.
+   - Continue this process until the end of the list is reached.
+
+3. Sorting a Linked List In-Place:
+----------------------------------
+   - Implement algorithms like Merge Sort or Insertion Sort that can be adapted for linked lists.   
+    - For Merge Sort, recursively split the list into halves, sort each half, and then merge them back together in sorted order.
+    - For Insertion Sort, iterate through the list and insert each node into its correct position in a new sorted portion of the list.
