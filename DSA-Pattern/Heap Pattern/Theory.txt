@@ -1,0 +1,21 @@
+Heap pattern is used when we need to repeadetly access the smallest or largest element from a changing dataset.
+
+Instead of sorting the entire data again and again, a heap keeps the most important element (smallest or largest) at the top, allowing for efficient retrieval and updates.
+
+Time Complexity:- Insertion: O(log n)
+                - Deletion: O(log n)
+                - Accessing the top element: O(1)
+Space Complexity:- O(n) for storing the heap elements.
+
+Heap=> Heap is a special binary tree with a strict ordering poperty. In a max heap, each parent node is greater than or equal to its children, while in a min heap, each parent node is less than or equal to its children. This structure allows for efficient retrieval of the maximum or minimum element, making heaps ideal for priority queues and other applications where quick access to the largest or smallest item is required.
+
+Min heap=> In a min heap, the smallest element is always at the root. This means that when we want to access the minimum element, we can do so in constant time O(1). However, when we insert a new element or remove the minimum element, we need to maintain the heap property by performing a series of comparisons and swaps, which takes logarithmic time O(log n).
+
+Max heap=> In a max heap, the largest element is always at the root. Similar to a min heap, accessing the maximum element can be done in constant time O(1). However, inserting a new element or removing the maximum element requires maintaining the heap property through comparisons and swaps, resulting in a logarithmic time complexity O(log n).
+
+Heap internally is often implemented using an array, where the parent-child relationships can be easily maintained. For a node at index i:
+- The left child is located at index 2*i + 1
+- The right child is located at index 2*i + 2
+- The parent node is located at index (i-1)//2
+This array-based implementation allows for efficient memory usage and easy access to the elements while maintaining the heap structure.
+
