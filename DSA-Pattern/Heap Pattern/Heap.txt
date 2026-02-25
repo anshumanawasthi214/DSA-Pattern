@@ -19,3 +19,9 @@ Heap internally is often implemented using an array, where the parent-child rela
 - The parent node is located at index (i-1)//2
 This array-based implementation allows for efficient memory usage and easy access to the elements while maintaining the heap structure.
 
+When we mainly use Heap=>
+
+*when repeatedly access the smallest or largest element from a changing dataset.
+*when Data arrives in a stream and we need to maintain the top k elements.
+*when we need to efficiently merge multiple sorted lists or arrays.
+*when we want to implement a priority queue, where elements are processed based on their priority rather than their order of arrival.
