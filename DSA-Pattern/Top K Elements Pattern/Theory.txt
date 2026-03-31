@@ -1,0 +1,27 @@
+Ques: What is "Top K elements" pattern?
+Answer: Find k important elements(largest, smallest, closest, most frequent etc.) from a dataset without sorting the entire dataset.
+
+Ques: How to identify the Tok K elements pattern ?
+Answer: 1. The problem is asking for the k largest/smallest/closest/most frequent elements.
+2. The problem is asking for the top k elements from a dataset.
+
+Ques: Why not just sort ?
+Answer: Sorting the entire dataset would take O(n log n) time, which is inefficient for large datasets. The Top K elements pattern allows us to find the desired elements in O(n log k) time using a min-heap or max-heap, which is more efficient when k is small compared to n.
+
+Ques: Which Heap to use ?
+Answer: For K Largest Elements=> Use a Min-Heap to keep track of the k largest elements.
+For K Smallest Elements=> Use a Max-Heap to keep track of the k smallest elements.
+
+Ques: What will be the time complexity of this approach ?
+Answer: The time complexity of this approach is O(n log k) because we need to iterate through all n elements and maintain a heap of size k, which takes O(log k) time for each insertion or removal operation.
+
+Ques: What will be the space complexity of this approach ?
+Answer: The space complexity of this approach is O(k) because we are maintaining a heap that can hold at most k elements at any given time.
+
+Ques: What are classical problems of this pattern ?
+Answer: 1. Kth Largest Element in an Array
+        2. Kth Smallest Element in an Array
+        3. Top K Frequent Elements
+        4. K Closest Points to Origin
+        5. K Closest Numbers to a Target
+        6. Kth Largest Element in a Stream
